@@ -1,0 +1,46 @@
+{
+  "name": "blog_app",
+  "version": "1.0.0",
+  "description": "Blog app api",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm run migrate",
+    "start": "node index.js",
+    "start:dev": "nodemon index.js",
+    "migrate": "npx sequelize-cli db:migrate",
+    "migrate:undo": "npx sequelize-cli db:migrate:undo",
+    "migrate:undo:all": "npx sequelize-cli db:migrate:undo:all",
+    "seed": "npx sequelize-cli db:seed:all",
+    "seed:undo:all": "npx sequelize-cli db:seed:undo:all",
+    "create": "npx sequelize-cli db:create",
+    "drop:db": "npx sequelize-cli db:drop",
+    "seed:undo": "npx sequelize-cli db:seed:undo"
+  },
+  "author": "kareraolivier",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/preset-env": "^7.22.15",
+    "@sendgrid/mail": "^7.7.0",
+    "bcrypt": "^5.1.1",
+    "cloudinary": "^1.40.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "esm": "^3.2.25",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "jwks-rsa": "^3.0.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.1",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.33.0",
+    "sequelize-cli": "^6.6.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.21.8",
+    "@babel/preset-env": "^7.21.5"
+  }
+}
